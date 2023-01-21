@@ -14,5 +14,4 @@ jobs:
       - name: Build da docka
         run: |
           docker build . --tag ghcr.io/aaryswastaken/k8s-tinkering:latest
-          docker run ghcr.io/aaryswastaken/k8s-tinkering:latest
           docker push ghcr.io/aaryswastaken/k8s-tinkering:latest
