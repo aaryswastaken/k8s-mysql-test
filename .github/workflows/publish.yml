@@ -1,0 +1,18 @@
+name: publish
+on: [push]
+jobs:
+  publish-docker-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Login to GitHub Container Registery
+    uses: docker/login-action@v1
+    with:
+      registery: ghcr.io
+      username: ${{ github.actor }}
+      password: ${{ secrets.GITHUB_TOKEN }}
+      name: Build da docker
+      run: |
+        docker build . --tag ghcr.io/aaryswastaken/k8s-tinkering:latest
+        docker run ghcr.io/aaryswastaken/k8s-tinkering:latest
+        docker push ghcr.io/aaryswastaken/k8s-tinkering:latest
