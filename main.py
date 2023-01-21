@@ -8,7 +8,7 @@ usr = os.getenv("MYSQL_USER", "")
 pwd = os.getenv("MYSQL_PASS", "")
 host = os.getenv("MYSQL_HOST", "")
 port = os.getenv("MYSQL_PORT", "")
-dataase = os.getenv("MYSQL_DB", "")
+database = os.getenv("MYSQL_DB", "")
 
 
 cnx = mysql.connector.connect(user=usr, password=pwd, host=host, port=port, db=database)
