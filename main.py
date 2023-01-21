@@ -4,11 +4,11 @@ import os
 import time
 
 
-usr = os.environ["MYSQL_USER"]
-pwd = os.environ["MYSQL_PASS"]
-host = os.environ["MYSQL_HOST"]
-port = os.environ["MYSQL_PORT"]
-dataase = os.environ["MYSQL_DB"]
+usr = os.getenv("MYSQL_USER", "")
+pwd = os.getenv("MYSQL_PASS", "")
+host = os.getenv("MYSQL_HOST", "")
+port = os.getenv("MYSQL_PORT", "")
+dataase = os.getenv("MYSQL_DB", "")
 
 
 cnx = mysql.connector.connect(user=usr, password=pwd, host=host, port=port, db=database)
