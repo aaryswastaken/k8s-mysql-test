@@ -1,8 +1,8 @@
 FROM python:3
 
-COPY requirenents.txt .
+COPY requirements.txt .
 
-RUN pip install -r requirements
+RUN pip install -r requirements.txt
 
 COPY main.py .
 
