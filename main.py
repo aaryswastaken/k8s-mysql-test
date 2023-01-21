@@ -5,7 +5,7 @@ import time
 
 
 usr = os.environ["MYSQL_USER"]
-pws = os.environ["MYSQL_PASS"]
+pwd = os.environ["MYSQL_PASS"]
 host = os.environ["MYSQL_HOST"]
 port = os.environ["MYSQL_PORT"]
 dataase = os.environ["MYSQL_DB"]
