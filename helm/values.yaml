@@ -26,7 +26,7 @@ mariadb:
     user: aarysIsLost
     password: strongPassword
     host: mariadb
-    port: "3306"
+    port: 3306
     forcePassword: true
   replication:
     enabled: false
