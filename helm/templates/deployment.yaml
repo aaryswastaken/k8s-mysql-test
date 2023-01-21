@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "{{ .Release.Name }}-deployment"
+  labels:
+    app: send-elp
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: send-elp
+  template:
+    metadata:
+      labels:
+        app: send-elp
+    spec:
+      containers:
+        - name: send-elp
+          image: "{{ .Values.image.repository }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          envFrom:
+            - secretRef:
+              name: "{{ .Release.Name }}-secret"

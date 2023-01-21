@@ -10,3 +10,26 @@ service:
 ingress:
   enables: false
   host: ""
+
+nodeSelector:
+  enable: false
+  labelKey: ""
+  labelValue: ""
+
+storage:
+  size: 1Gi
+
+mariadb:
+  enabled: true
+  db:
+    name: hmmmm
+    user: aarysIsLost
+    password: strongPassword
+    host:
+    port: "3306"
+    forcePassword: true
+  replication:
+    enabled: false
+  master:
+    persistence:
+      size: 1Gi

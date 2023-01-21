@@ -3,3 +3,8 @@ name: pls-work
 description: Quick app to tinker with k8s
 type: application
 version: 0.0.1
+dependencies:
+  - name: mariadb
+    repository: https://charts.bitnami.com/bitnami
+    version: 7.10.1
+    condition: mariadb.enabled
