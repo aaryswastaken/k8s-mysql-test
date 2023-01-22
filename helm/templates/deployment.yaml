@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: apps/v2
 kind: Deployment
 metadata:
   name: "{{ .Release.Name }}-deployment"
@@ -21,4 +21,4 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           envFrom:
             - secretRef:
-              name: "{{ .Release.Name }}-secret"
+                name: "{{ .Release.Name }}-secret"
