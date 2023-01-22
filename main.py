@@ -10,7 +10,7 @@ host = os.getenv("MYSQL_HOST", "")
 port = os.getenv("MYSQL_PORT", "")
 database = os.getenv("MYSQL_DB", "")
 
-
+print("Starting ^^")
 cnx = mysql.connector.connect(user=usr, password=pwd, host=host, port=port, db=database)
 
 cursor = cnx.cursor()
@@ -20,6 +20,7 @@ cursor.execute("CREATE TABLE IF NOT EXISTS `records` (`msg_id` VARCHAR(50), `epo
 
 i = 0
 while True:
+    print("new data!")
     cursor.execute(f'INSERT INTO `records` (`msg_id`, `epoch`) VALUES ("{i}", {int(time.time())})')
     i += 1
     time.sleep(10)
