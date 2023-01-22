@@ -8,11 +8,11 @@ service:
   type: ClusterIP
 
 ingress:
-  enables: false
+  enabled: false
   host: ""
 
 nodeSelector:
-  enable: false
+  enabled: false
   labelKey: ""
   labelValue: ""
 
