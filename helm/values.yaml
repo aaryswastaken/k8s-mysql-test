@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: ghcr.io/aaryswastaken/k8s-tinkering:latest
+  repository: ghcr.io/aaryswastaken/k8s-tinkering
   pullPolicy: IfNotPresent
 
 service:
