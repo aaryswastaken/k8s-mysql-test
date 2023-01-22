@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: send-elp
-          image: "{{ .Values.image.repository }}"
+          image: "{{ .Values.image.repository }}:latest"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           envFrom:
             - secretRef:
